@@ -1,0 +1,34 @@
+<md-card>
+  <md-toolbar color="accent" *ngIf='logItems && logItems.length>0'>
+    <!--<md-button-toggle value="1" #swDebug (click)='switchFilter(swDebug)'>
+      <md-icon>bug_report</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="2" #swInfo (click)='switchFilter(swInfo)'>
+      <md-icon>info</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="3" #swWarn (click)='switchFilter(swWarn)'>
+      <md-icon>warning</md-icon>
+    </md-button-toggle>
+    <md-button-toggle value="4" #swError (click)='switchFilter(swError)'>
+      <md-icon>error</md-icon>
+    </md-button-toggle>-->
+
+    <span class="fill-space"></span>
+
+    <button md-mini-fab (click)="deleteLogItems()">
+        <md-icon>delete</md-icon>
+    </button>
+  </md-toolbar>
+
+  <md-nav-list dense>
+    <ng-container *ngFor="let logItem of logItems">
+      <md-list-item [class.debug]='logItem.level==1' [class.info]='logItem.level==2' [class.warn]='logItem.level==3' [class.error]='logItem.level==4'
+        *ngIf='showDebug==true'>
+        {{logItem.message}}
+        <span class="fill-space"></span>
+        <span class="timestamp">{{logItem.timestamp  | date:'HH:mm:ss'}}</span>
+      </md-list-item>
+    </ng-container>
+  </md-nav-list>
+
+</md-card>

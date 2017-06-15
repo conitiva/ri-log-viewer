@@ -1,0 +1,8 @@
+md-sidenav {
+  height: 100%;
+  width: 300px;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}

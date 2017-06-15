@@ -1,0 +1,27 @@
+md-card {
+    padding: 0;
+}
+
+.debug{
+    color: aquamarine;
+}
+
+.info{
+    color: green;
+}
+
+.warn{
+    color: darkgoldenrod;
+}
+
+.error{
+    color: red;
+}
+
+.fill-space {
+  flex: 1 1 auto;
+}
+
+.timestamp{
+    float: right;
+}
